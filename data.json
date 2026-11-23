@@ -1,0 +1,112 @@
+﻿{
+    "atualizado":  "23/11/2026 (tarde)",
+    "periodo":  "Últimos 7 dias (16 a 23/11)",
+    "ml":  {
+               "vendas_brutas":  128,
+               "vendas":  3,
+               "unidades":  7,
+               "visitas":  127,
+               "visitas_ant":  138,
+               "conversao":  2.4,
+               "intencao":  4,
+               "cancelamentos":  0,
+               "anuncios":  105,
+               "reputacao":  "Verde",
+               "alerta_reputacao":  "Perto de perder o verde",
+               "envios_incorretos":  10,
+               "envios_limite":  13,
+               "reclamacoes":  0,
+               "reclamacoes_limite":  2,
+               "canceladas":  0,
+               "canceladas_limite":  2.5,
+               "top":  [
+                           {
+                               "nome":  "Kit 5 Pulseiras Pretas",
+                               "vendas":  2,
+                               "valor":  113,
+                               "conversao":  40
+                           },
+                           {
+                               "nome":  "Pulseira Zé Pilintra Tricolor",
+                               "vendas":  1,
+                               "valor":  14,
+                               "conversao":  33.3
+                           }
+                       ]
+           },
+    "shopee":  {
+                   "vendas_brutas":  0,
+                   "pedidos":  0,
+                   "produtos_ativos":  51,
+                   "obs":  "Anúncios novos (22 e 23/11). Visitas ainda em processamento."
+               },
+    "envios":  [
+                   {
+                       "data":  "24/11",
+                       "plataforma":  "Mercado Livre",
+                       "item":  "5x Kit 5 Pulseiras Pretas (25 pulseiras)",
+                       "status":  "Etiqueta libera dia 24 — levar na agência no mesmo dia",
+                       "urgente":  true
+                   },
+                   {
+                       "data":  "26/11",
+                       "plataforma":  "Mercado Livre",
+                       "item":  "1x Kit 5 Pulseiras Pretas (5 pulseiras)",
+                       "status":  "Etiqueta libera dia 26",
+                       "urgente":  false
+                   }
+               ],
+    "tarefas":  [
+                    {
+                        "id":  "t0",
+                        "texto":  "Entrar na Central de vendedores do ML e fazer a verificação facial (o ML travou e faltam vídeos e opção Clássico de parte dos 50 anúncios novos)",
+                        "prioridade":  "alta"
+                    },
+                    {
+                        "id":  "t1",
+                        "texto":  "Separar as 25 pulseiras pretas do pedido do dia 24",
+                        "prioridade":  "alta"
+                    },
+                    {
+                        "id":  "t2",
+                        "texto":  "Comprar cordão rabo de rato preto 1 mm (rolo 100 m, R$9,95 — levar 2 para frete grátis)",
+                        "prioridade":  "alta",
+                        "link":  "https://www.mercadolivre.com.br/fio-de-cetim-rabo-de-rato-1mm-rolo-100m-poliester-cor-310/up/MLBU4225750631"
+                    },
+                    {
+                        "id":  "t3",
+                        "texto":  "Postar o pedido do dia 24 na agência no mesmo dia (não pode atrasar: reputação no limite)",
+                        "prioridade":  "alta"
+                    },
+                    {
+                        "id":  "t4",
+                        "texto":  "Postar o pedido do dia 26 na agência",
+                        "prioridade":  "media"
+                    },
+                    {
+                        "id":  "t5",
+                        "texto":  "Conferir a devolução antiga (Kit 2 Zé Pilintra, pedido de 10/07)",
+                        "prioridade":  "media"
+                    },
+                    {
+                        "id":  "t6",
+                        "texto":  "Mandar fotos reais da pulseira branca de 2 mm para criar os anúncios",
+                        "prioridade":  "media"
+                    },
+                    {
+                        "id":  "t7",
+                        "texto":  "Responder: escrever \u0027cordão 1 mm\u0027 nos anúncios atuais?",
+                        "prioridade":  "baixa"
+                    },
+                    {
+                        "id":  "t8",
+                        "texto":  "Depois de 30/11: subir o preço do Kit 5 no ML",
+                        "prioridade":  "baixa"
+                    },
+                    {
+                        "id":  "t9",
+                        "texto":  "Imprimir os cartões de modo de uso (PDF A4, papel 180 g) e colocar em cada pedido",
+                        "prioridade":  "media"
+                    }
+                ]
+}

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Painel da Loja · Pulseiras 7 Nós</title>
+<style>
+  :root{
+    --bg:#f6f3ee; --card:#fff; --ink:#1f1a16; --mute:#7a6f66; --line:#ece5dc;
+    --ml:#ffe600; --ml-ink:#2d3277; --sh:#ee4d2d; --ok:#1f9d55; --warn:#e08a00; --bad:#d93025;
+    --r:16px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+  header{background:linear-gradient(135deg,#7a1020,#b3192c);color:#fff;padding:22px 18px 28px}
+  header h1{margin:0;font-size:22px}
+  header p{margin:4px 0 0;opacity:.85;font-size:13px}
+  main{max-width:1100px;margin:-16px auto 40px;padding:0 14px;display:grid;gap:14px}
+  .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+  .card{background:var(--card);border-radius:var(--r);padding:16px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+  .card h2{margin:0 0 12px;font-size:16px;display:flex;align-items:center;gap:8px}
+  .tag{font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px}
+  .tag.ml{background:var(--ml);color:var(--ml-ink)} .tag.sh{background:var(--sh);color:#fff}
+  .kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+  .kpi{background:#faf7f3;border-radius:12px;padding:10px 12px}
+  .kpi b{display:block;font-size:22px} .kpi span{font-size:12px;color:var(--mute)}
+  .delta.up{color:var(--ok)} .delta.down{color:var(--bad)}
+  .alert{border-left:5px solid var(--bad);background:#fff4f3}
+  .alert h2{color:var(--bad)}
+  .bar{height:10px;background:var(--line);border-radius:99px;overflow:hidden;margin:6px 0 2px;position:relative}
+  .bar i{display:block;height:100%;border-radius:99px}
+  .rep-row{margin:10px 0;font-size:13px}
+  .rep-row .top{display:flex;justify-content:space-between}
+  ul{list-style:none;margin:0;padding:0}
+  .task{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+  .task:last-child{border:0}
+  .task input{width:20px;height:20px;margin-top:1px;accent-color:var(--ok);flex:none}
+  .task.done span{text-decoration:line-through;color:var(--mute)}
+  .prio{font-size:10px;font-weight:700;text-transform:uppercase;padding:2px 6px;border-radius:6px;margin-left:6px;white-space:nowrap}
+  .prio.alta{background:#fde2e0;color:var(--bad)} .prio.media{background:#fff0d6;color:var(--warn)} .prio.baixa{background:#e8f5ec;color:var(--ok)}
+  .ship{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+  .ship:last-child{border:0}
+  .date{flex:none;width:56px;text-align:center;border-radius:12px;background:#faf7f3;padding:6px 0;font-weight:800}
+  .date.urg{background:var(--bad);color:#fff}
+  .ship small{color:var(--mute);display:block;margin-top:2px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{text-align:left;padding:8px 4px;border-bottom:1px solid var(--line)}
+  th{color:var(--mute);font-weight:600}
+  .progress{font-size:12px;color:var(--mute);margin-bottom:6px}
+  a{color:#b3192c}
+  footer{text-align:center;color:var(--mute);font-size:12px;padding-bottom:30px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Painel da Loja · Pulseiras 7 Nós</h1>
+  <p id="sub">Carregando…</p>
+</header>
+<main>
+  <section class="card alert" id="alertCard" hidden>
+    <h2>⚠️ Atenção</h2>
+    <div id="alertTxt"></div>
+  </section>
+
+  <div class="grid">
+    <section class="card">
+      <h2>📦 Envios agendados</h2>
+      <div id="envios"></div>
+    </section>
+    <section class="card">
+      <h2>✅ O que fazer</h2>
+      <div class="progress" id="prog"></div>
+      <ul id="tarefas"></ul>
+    </section>
+  </div>
+
+  <div class="grid">
+    <section class="card">
+      <h2><span class="tag ml">Mercado Livre</span> Vendas e métricas</h2>
+      <div class="kpis" id="mlKpis"></div>
+    </section>
+    <section class="card">
+      <h2><span class="tag ml">Mercado Livre</span> Reputação</h2>
+      <div id="rep"></div>
+    </section>
+  </div>
+
+  <div class="grid">
+    <section class="card">
+      <h2>🏆 Mais vendidos (ML)</h2>
+      <table><thead><tr><th>Anúncio</th><th>Vendas</th><th>R$</th><th>Conv.</th></tr></thead><tbody id="top"></tbody></table>
+    </section>
+    <section class="card">
+      <h2><span class="tag sh">Shopee</span> Vendas e métricas</h2>
+      <div class="kpis" id="shKpis"></div>
+      <p style="font-size:12px;color:var(--mute);margin:10px 0 0" id="shObs"></p>
+    </section>
+  </div>
+</main>
+<footer>As tarefas marcadas ficam salvas neste aparelho.</footer>
+
+<script>
+const brl = v => v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+const kpi = (v,l,extra='') => `<div class="kpi"><b>${v}</b><span>${l}${extra}</span></div>`;
+const KEY = 'painel-tarefas-v1';
+const done = JSON.parse(localStorage.getItem(KEY) || '{}');
+
+fetch('data.json?v=' + Date.now()).then(r => r.json()).then(d => {
+  document.getElementById('sub').textContent = `${d.periodo} · atualizado em ${d.atualizado}`;
+  const m = d.ml, s = d.shopee;
+
+  if (m.alerta_reputacao) {
+    document.getElementById('alertCard').hidden = false;
+    document.getElementById('alertTxt').innerHTML =
+      `<b>Reputação ML: ${m.alerta_reputacao}.</b> Envios atrasados em ${m.envios_incorretos}% (limite ~${m.envios_limite}%). ` +
+      `Mais um atraso faz perder o verde — poste todos os pedidos no dia em que a etiqueta liberar.`;
+  }
+
+  document.getElementById('envios').innerHTML = d.envios.map(e => `
+    <div class="ship"><div class="date ${e.urgente ? 'urg' : ''}">${e.data}</div>
+    <div><b>${e.item}</b><small>${e.plataforma} · ${e.status}</small></div></div>`).join('') || '<p>Nenhum envio pendente.</p>';
+
+  const ul = document.getElementById('tarefas');
+  const render = () => {
+    ul.innerHTML = d.tarefas.map(t => `
+      <li class="task ${done[t.id] ? 'done' : ''}">
+        <input type="checkbox" data-id="${t.id}" ${done[t.id] ? 'checked' : ''} aria-label="Concluir tarefa">
+        <span>${t.link ? `<a href="${t.link}" target="_blank" rel="noopener">${t.texto}</a>` : t.texto}<em class="prio ${t.prioridade}">${t.prioridade}</em></span>
+      </li>`).join('');
+    const n = d.tarefas.filter(t => done[t.id]).length;
+    document.getElementById('prog').textContent = `${n} de ${d.tarefas.length} concluídas`;
+  };
+  ul.addEventListener('change', e => {
+    const id = e.target.dataset.id; if (!id) return;
+    done[id] = e.target.checked; localStorage.setItem(KEY, JSON.stringify(done)); render();
+  });
+  render();
+
+  const dv = m.visitas_ant ? Math.round((m.visitas - m.visitas_ant) / m.visitas_ant * 100) : 0;
+  document.getElementById('mlKpis').innerHTML =
+    kpi(brl(m.vendas_brutas), 'Vendas brutas') +
+    kpi(`${m.vendas} <small style="font-size:13px">(${m.unidades} un.)</small>`, 'Vendas') +
+    kpi(m.visitas, 'Visitas', ` · <span class="delta ${dv >= 0 ? 'up' : 'down'}">${dv >= 0 ? '+' : ''}${dv}%</span>`) +
+    kpi(m.conversao.toLocaleString('pt-BR') + '%', 'Conversão') +
+    kpi(m.intencao, 'Intenção de compra') +
+    kpi(m.anuncios, 'Anúncios de pulseira');
+
+  const row = (label, v, lim) => {
+    const pct = Math.min(100, v / lim * 100), cor = pct >= 75 ? 'var(--bad)' : pct >= 40 ? 'var(--warn)' : 'var(--ok)';
+    return `<div class="rep-row"><div class="top"><span>${label}</span><b>${v.toLocaleString('pt-BR')}% / ${lim.toLocaleString('pt-BR')}%</b></div>
+      <div class="bar"><i style="width:${Math.max(pct, 2)}%;background:${cor}"></i></div></div>`;
+  };
+  document.getElementById('rep').innerHTML =
+    `<p style="margin:0 0 6px;font-size:14px">Cor atual: <b style="color:var(--ok)">${m.reputacao}</b></p>` +
+    row('Envios com atraso', m.envios_incorretos, m.envios_limite) +
+    row('Reclamações', m.reclamacoes, m.reclamacoes_limite) +
+    row('Canceladas por você', m.canceladas, m.canceladas_limite);
+
+  document.getElementById('top').innerHTML = m.top.map(t =>
+    `<tr><td>${t.nome}</td><td>${t.vendas}</td><td>${brl(t.valor)}</td><td>${t.conversao.toLocaleString('pt-BR')}%</td></tr>`).join('');
+
+  document.getElementById('shKpis').innerHTML =
+    kpi(brl(s.vendas_brutas), 'Vendas brutas') + kpi(s.pedidos, 'Pedidos') + kpi(s.produtos_ativos, 'Produtos ativos');
+  document.getElementById('shObs').textContent = s.obs || '';
+}).catch(() => { document.getElementById('sub').textContent = 'Não foi possível carregar os dados.'; });
+</script>
+</body>
+</html>
