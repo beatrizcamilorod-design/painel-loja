@@ -1,6 +1,6 @@
 {
-  "atualizado": "23/11/2026 (tarde)",
-  "periodo": "Últimos 7 dias (16 a 23/11)",
+  "atualizado": "24/11/2026 08:00",
+  "periodo": "Últimos 7 dias (métricas de 16 a 23/11; painel de métricas do ML com erro em 24/11)",
   "ml": {
     "vendas_brutas": 128,
     "vendas": 3,
@@ -33,20 +33,20 @@
         "conversao": 33.3
       }
     ],
-    "anuncios_pulseira": 105
+    "anuncios_pulseira": 104
   },
   "shopee": {
     "vendas_brutas": 0,
     "pedidos": 0,
     "produtos_ativos": 51,
-    "obs": "Anúncios novos (22 e 23/11). Visitas ainda em processamento."
+    "obs": "Nenhum pedido. Loja reorganizada em 24/11 (nome Smart Docs, 6 categorias)."
   },
   "envios": [
     {
       "data": "24/11",
       "plataforma": "Mercado Livre",
       "item": "5x Kit 5 Pulseiras Pretas (25 pulseiras)",
-      "status": "Etiqueta libera dia 24 — levar na agência no mesmo dia",
+      "status": "Emitir DC-e, imprimir etiqueta e levar na agência hoje até 15:30",
       "urgente": true
     },
     {
@@ -79,7 +79,7 @@
     },
     {
       "id": "t3",
-      "texto": "Postar o pedido do dia 24 na agência no mesmo dia (não pode atrasar: reputação no limite)",
+      "texto": "Hoje até 15:30: emitir a DC-e, imprimir a etiqueta e postar o pedido de 25 pulseiras na agência (reputação no limite)",
       "prioridade": "alta",
       "icone": "🚚"
     },
