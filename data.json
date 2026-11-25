@@ -1,5 +1,5 @@
 {
-  "atualizado": "25/11/2026 08:00",
+  "atualizado": "25/11/2026 14:55",
   "periodo": "Últimos 7 dias (métricas de 16 a 23/11; painel de métricas do ML com erro em 24 e 25/11)",
   "ml": {
     "vendas_brutas": 128,
@@ -43,13 +43,6 @@
   },
   "envios": [
     {
-      "data": "24/11",
-      "plataforma": "Mercado Livre",
-      "item": "5x Kit 5 Pulseiras Pretas (25 pulseiras)",
-      "status": "Atrasado 1 dia: levar na agência hoje o quanto antes",
-      "urgente": true
-    },
-    {
       "data": "26/11",
       "plataforma": "Mercado Livre",
       "item": "1x Kit 5 Pulseiras Pretas (5 pulseiras)",
@@ -66,22 +59,10 @@
   ],
   "tarefas": [
     {
-      "id": "t10",
-      "texto": "HOJE cedo: postar o pedido atrasado de 25 pulseiras na agência (Telhas Thor abre 7:30)",
-      "prioridade": "alta",
-      "icone": "🚚"
-    },
-    {
       "id": "t0",
       "texto": "Entrar na Central de vendedores do ML e fazer a verificação facial (o ML travou e faltam vídeos e opção Clássico de parte dos 50 anúncios novos)",
       "prioridade": "alta",
       "icone": "🪪"
-    },
-    {
-      "id": "t1",
-      "texto": "Separar as 25 pulseiras pretas do pedido do dia 24",
-      "prioridade": "alta",
-      "icone": "📦"
     },
     {
       "id": "t2",
@@ -92,7 +73,7 @@
     },
     {
       "id": "t4",
-      "texto": "Amanhã (26/11): imprimir a etiqueta e postar o Kit 5 Pretas na agência até 15:30",
+      "texto": "Amanhã (26/11): imprimir a etiqueta e postar o Kit 5 Pretas na agência até 15:30 (montar o pacote hoje à noite)",
       "prioridade": "alta",
       "icone": "🚚"
     },
