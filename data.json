@@ -1,6 +1,6 @@
 {
-  "atualizado": "24/11/2026 08:00",
-  "periodo": "Últimos 7 dias (métricas de 16 a 23/11; painel de métricas do ML com erro em 24/11)",
+  "atualizado": "25/11/2026 08:00",
+  "periodo": "Últimos 7 dias (métricas de 16 a 23/11; painel de métricas do ML com erro em 24 e 25/11)",
   "ml": {
     "vendas_brutas": 128,
     "vendas": 3,
@@ -11,9 +11,9 @@
     "intencao": 4,
     "cancelamentos": 0,
     "anuncios": 251,
-    "reputacao": "Verde",
-    "alerta_reputacao": "Perto de perder o verde",
-    "envios_incorretos": 10,
+    "reputacao": "Amarelo",
+    "alerta_reputacao": "Perdeu o verde: envios incorretos 18,18% (2 de 11), limite 13%. Faltam 5 envios corretos para voltar ao verde.",
+    "envios_incorretos": 18.18,
     "envios_limite": 13,
     "reclamacoes": 0,
     "reclamacoes_limite": 2,
@@ -46,18 +46,31 @@
       "data": "24/11",
       "plataforma": "Mercado Livre",
       "item": "5x Kit 5 Pulseiras Pretas (25 pulseiras)",
-      "status": "Emitir DC-e, imprimir etiqueta e levar na agência hoje até 15:30",
+      "status": "Atrasado 1 dia: levar na agência hoje o quanto antes",
       "urgente": true
     },
     {
       "data": "26/11",
       "plataforma": "Mercado Livre",
       "item": "1x Kit 5 Pulseiras Pretas (5 pulseiras)",
-      "status": "Etiqueta libera dia 26",
+      "status": "Etiqueta libera amanhã (26/11)",
+      "urgente": true
+    },
+    {
+      "data": "27/11",
+      "plataforma": "Mercado Livre",
+      "item": "1x Kit 6 Pulseiras (3 vermelhas e 3 pretas)",
+      "status": "Etiqueta libera dia 27",
       "urgente": false
     }
   ],
   "tarefas": [
+    {
+      "id": "t10",
+      "texto": "HOJE cedo: postar o pedido atrasado de 25 pulseiras na agência (Telhas Thor abre 7:30)",
+      "prioridade": "alta",
+      "icone": "🚚"
+    },
     {
       "id": "t0",
       "texto": "Entrar na Central de vendedores do ML e fazer a verificação facial (o ML travou e faltam vídeos e opção Clássico de parte dos 50 anúncios novos)",
@@ -78,15 +91,9 @@
       "icone": "🛒"
     },
     {
-      "id": "t3",
-      "texto": "Hoje até 15:30: emitir a DC-e, imprimir a etiqueta e postar o pedido de 25 pulseiras na agência (reputação no limite)",
-      "prioridade": "alta",
-      "icone": "🚚"
-    },
-    {
       "id": "t4",
-      "texto": "Postar o pedido do dia 26 na agência",
-      "prioridade": "media",
+      "texto": "Amanhã (26/11): imprimir a etiqueta e postar o Kit 5 Pretas na agência até 15:30",
+      "prioridade": "alta",
       "icone": "🚚"
     },
     {
@@ -118,6 +125,12 @@
       "texto": "Imprimir os cartões de modo de uso (PDF A4, papel 180 g) e colocar em cada pedido",
       "prioridade": "media",
       "icone": "🖨️"
+    },
+    {
+      "id": "t11",
+      "texto": "27/11: separar e postar o Kit 6 (3 vermelhas e 3 pretas)",
+      "prioridade": "media",
+      "icone": "📦"
     }
   ],
   "meta_semana": 200
