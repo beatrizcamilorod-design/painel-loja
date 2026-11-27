@@ -1,5 +1,5 @@
 {
-    "atualizado":  "26/11/2026 08:00",
+    "atualizado":  "27/11/2026 08:00",
     "periodo":  "Últimos 7 dias (métricas de 16 a 23/11; painel de métricas do ML com erro desde 24/11)",
     "ml":  {
                "vendas_brutas":  128,
@@ -10,7 +10,7 @@
                "conversao":  2.4,
                "intencao":  4,
                "cancelamentos":  0,
-               "anuncios":  251,
+               "anuncios":  256,
                "reputacao":  "Amarelo",
                "alerta_reputacao":  "Perdeu o verde: envios incorretos 18,18% (2 de 11), limite 13%. Faltam 5 envios corretos para voltar ao verde.",
                "envios_incorretos":  18.18,
@@ -33,27 +33,20 @@
                                "conversao":  33.3
                            }
                        ],
-               "anuncios_pulseira":  104
+               "anuncios_pulseira":  109
            },
     "shopee":  {
                    "vendas_brutas":  0,
                    "pedidos":  0,
-                   "produtos_ativos":  51,
-                   "obs":  "Nenhum pedido. 51 produtos ativos, 7 não publicados."
+                   "produtos_ativos":  56,
+                   "obs":  "Nenhum pedido. 56 produtos ativos."
                },
     "envios":  [
-                   {
-                       "data":  "26/11",
-                       "plataforma":  "Mercado Livre",
-                       "item":  "1x Kit 5 Pulseiras Pretas (5 pulseiras)",
-                       "status":  "HOJE: emitir DC-e, imprimir etiqueta e postar na agência até 15:30",
-                       "urgente":  true
-                   },
                    {
                        "data":  "27/11",
                        "plataforma":  "Mercado Livre",
                        "item":  "1x Kit 6 Pulseiras (3 vermelhas e 3 pretas)",
-                       "status":  "Etiqueta libera amanhã (27/11)",
+                       "status":  "HOJE: etiqueta impressa, postar na agência até 15:30",
                        "urgente":  true
                    }
                ],
@@ -72,8 +65,8 @@
                         "icone":  "🛒"
                     },
                     {
-                        "id":  "t4",
-                        "texto":  "HOJE (26/11): emitir a DC-e, imprimir a etiqueta e postar o Kit 5 Pretas na agência até 15:30",
+                        "id":  "t11",
+                        "texto":  "HOJE (27/11): postar o Kit 6 (3 vermelhas e 3 pretas) na agência até 15:30 — etiqueta já impressa",
                         "prioridade":  "alta",
                         "icone":  "🚚"
                     },
@@ -91,7 +84,7 @@
                     },
                     {
                         "id":  "t7",
-                        "texto":  "Responder: escrever \u0027cordão 1 mm\u0027 nos anúncios atuais?",
+                        "texto":  "Responder: escrever 'cordão 1 mm' nos anúncios atuais?",
                         "prioridade":  "baixa",
                         "icone":  "✏️"
                     },
@@ -106,12 +99,6 @@
                         "texto":  "Imprimir os cartões de modo de uso (PDF A4, papel 180 g) e colocar em cada pedido",
                         "prioridade":  "media",
                         "icone":  "🖨️"
-                    },
-                    {
-                        "id":  "t11",
-                        "texto":  "Amanhã (27/11): separar e postar o Kit 6 (3 vermelhas e 3 pretas)",
-                        "prioridade":  "alta",
-                        "icone":  "📦"
                     }
                 ],
     "meta_semana":  200
